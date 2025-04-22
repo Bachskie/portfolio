@@ -98,7 +98,7 @@ img {
 @media (max-width: 768px) {
   /* 1) shrink the root font-size */
   html {
-    font-size: 87.5% !important; /* ≈14px instead of 16px */
+    font-size: 50% !important; /* ≈14px instead of 16px */
   }
   /* 2) explicit tweaks to guarantee smaller text */
   .cover-header {
