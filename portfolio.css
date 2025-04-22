@@ -3,7 +3,7 @@
 }
 
 html {
-  /* Base 16px for desktop */
+  /* desktop base size */
   font-size: 100%;
 }
 
@@ -47,7 +47,6 @@ img {
   background: #000;
   margin: 16px 0;
 }
-/* Centered “PORTFOLIO” */
 .cover-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 3rem;
@@ -80,7 +79,7 @@ img {
   letter-spacing: 0.05em;
 }
 
-/* Gallery Grid: Masonry Layout */
+/* Gallery Grid */
 .gallery-grid .grid {
   column-count: 3;
   column-gap: var(--gap);
@@ -91,19 +90,32 @@ img {
   margin: 0 0 var(--gap);
   break-inside: avoid;
 }
-
-/* Horizontal large featured item */
 .gallery-grid figure.horizontal-large {
   column-span: all;
 }
 
-/* Responsive: mobile tweaks */
+/* MOBILE OVERRIDES */
 @media (max-width: 768px) {
-  /* shrink all rem-based text uniformly */
+  /* 1) shrink the root font-size */
   html {
-    font-size: 30%; /* ≈14px base instead of 16px */
+    font-size: 87.5% !important; /* ≈14px instead of 16px */
+  }
+  /* 2) explicit tweaks to guarantee smaller text */
+  .cover-header {
+    font-size: 0.8rem !important;
+  }
+  .cover-title {
+    font-size: 2.5rem !important;
+  }
+  .intro-text-split h2 {
+    font-size: 1.5rem !important;
+  }
+  .intro-text-split p {
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
   }
 
+  /* layout tweaks */
   .intro-split {
     grid-template-columns: 1fr;
   }
