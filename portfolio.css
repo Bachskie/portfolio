@@ -1,0 +1,105 @@
+/* File: portfolio.css */
+
+:root {
+  --gap: 24px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.magazine {
+  width: 90%;
+  max-width: 1000px;
+  margin: var(--gap) auto;
+}
+
+.page {
+  background: #fff;
+  padding: var(--gap);
+  margin-bottom: var(--gap);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Cover */
+.cover-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+.cover-line {
+  border: none;
+  height: 1px;
+  background: #000;
+  margin: 16px 0;
+}
+/* Centered “PORTFOLIO” */
+.cover-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: var(--gap);
+  letter-spacing: 0.1em;
+}
+.cover-image {
+  margin-top: var(--gap);
+}
+
+/* Intro Split */
+.intro-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  align-items: start;
+}
+.intro-text-split h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 0.1em;
+}
+.intro-text-split p {
+  line-height: 2.4;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+/* Gallery Grid: Masonry Layout */
+.gallery-grid .grid {
+  column-count: 3;
+  column-gap: var(--gap);
+}
+.gallery-grid figure {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 var(--gap);
+  break-inside: avoid;
+}
+
+/* Horizontal large featured item */
+.gallery-grid figure.horizontal-large {
+  column-span: all;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-split {
+    grid-template-columns: 1fr;
+  }
+  .gallery-grid .grid {
+    column-count: 2;
+  }
+}
