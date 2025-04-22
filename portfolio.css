@@ -60,7 +60,7 @@ img {
 /* Intro Split */
 .intro-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.6fr 1fr;
   gap: var(--gap);
   align-items: start;
 }
@@ -73,8 +73,21 @@ img {
 }
 .intro-text-split p {
   line-height: 2.4;
-  font-size: 1rem;
+  font-size: 0.9rem;
   letter-spacing: 0.05em;
+}
+
+.intro-image-split {
+  flex: 1;           /* or flex: 2 for a bigger image */
+  max-width: 800px;  /* optional */
+  margin-left: auto; /* center if using max-width */
+}
+
+.intro-image-split img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Gallery Grid: Masonry Layout */
