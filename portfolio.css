@@ -35,7 +35,7 @@ img {
   display: flex;
   justify-content: space-between;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   letter-spacing: 1px;
 }
 .cover-line {
@@ -73,7 +73,7 @@ img {
 }
 .intro-text-split p {
   line-height: 2.4;
-  font-size: 1.1rem;
+  font-size: 1rem;
   letter-spacing: 0.05em;
 }
 
