@@ -1,7 +1,10 @@
-/* File: portfolio.css */
-
 :root {
   --gap: 24px;
+}
+
+html {
+  /* Base 16px for desktop */
+  font-size: 100%;
 }
 
 body {
@@ -94,8 +97,13 @@ img {
   column-span: all;
 }
 
-/* Responsive */
+/* Responsive: mobile tweaks */
 @media (max-width: 768px) {
+  /* shrink all rem-based text uniformly */
+  html {
+    font-size: 87.5%; /* ≈14px base instead of 16px */
+  }
+
   .intro-split {
     grid-template-columns: 1fr;
   }
